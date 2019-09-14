@@ -1,0 +1,24 @@
+###CODE FOR FIGURES IN 'THE EVOLUTIONARY BIOLOGY OF SPECIES' Oxford University Press, 2019.
+
+##Author: Timothy G. Barraclough (t.barraclough@imperial.ac.uk)
+
+##Citation: Timothy G. Barraclough 2019. The Evolutionary Biology of Species. Oxford Series in Ecology and Evolution. Oxford University Press, Oxford, UK.
+
+##CHAPTER 2, FIGURE 2.3, page 17
+
+The R code in this folder implements the simulation model described in Box 2.2 page 16 of the book for the scenarios shown in figure 2.3 on page 17. Run NoDiversification.R first before the other scripts.
+
+##Instructions
+The null model of no diversification in NoDiversification.R is run to generate a starting population with accumulated variation, 
+Scen0.rep1.endmatrices
+Scen0.rep2.endmatrices
+and so on for the number of replicate simulations.
+
+These are then used as a starting point for successive simulations adding in additional features relevant for diversification:
+
+A) Just assortative mating based on values of a reproductive trait: A.JustAssortativeMating.R
+B) As in A) plus geographical isolation between two populations: B.PlusGeographicalIsolation.R
+C) As in B) plus divergent selection on an ecological trait between the two populations: C.PlusDivergentSelection.R
+D) As in D) plus genetic covariance between the reproductive trait and ecological trait: D.PlusEcoReproCovariance.R
+
+You will need to specify directories/filenames so that each of these can find the Scen0.rep1.endmatrices etc. files. Each of them will spit out results and jpeg files. The final file "MakeFig2.3.R" replots phenotypic variation for all 4 diversification scenarios as in the figure in the book.
